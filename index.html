@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <style>
+
+header .logo {
+    width: 30px;
+}
+
+header p {
+    color: #5b6e93;
+}
+
+.medios {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+  
+  * {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color:#CCCCCC;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medios i {
+    color: red;
+}
+
+.contenedor {
+    width: 90%;
+    height: 80vh;
+    margin: 0px auto 50px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.divFormulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+			border-radius: 10px;
+		border: 2px solid #666666;
+		background:#CCCCCC;
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 230px;
+    font-size: 28px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.divFormulario p {
+    font-size: 13px;
+    color: rgb(49, 68, 84);
+}
+
+.divFormulario button,
+.alertasMensajes button {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease 400ms;
+}
+
+.divFormulario button:hover,
+.alertasMensajes button:hover {
+    transform: scale(1.05);
+}
+
+.botones {
+    margin-top: 5px;
+    display: flex;
+    gap: 15px;
+
+}
+
+.divFormulario .btEncrit {
+    background-color: #666666	;
+    color: #fff;
+    flex: 1;
+}
+
+.divFormulario .btDecencript {
+    border: 1px solid #999999;
+    color: rgb(17, 121, 201);
+    flex: 1;
+}
+
+.error {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid rgb(188, 1, 66);
+    color: rgb(188, 1, 66);
+    margin: 7px;
+    border-radius: 5px;
+}
+
+
+.alertasMensajes {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgb(195, 205, 216);
+}
+
+.alertasMensajes img {
+    width: 150px;
+}
+@media (max-width: 400px) {
+    .contenedor {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .divFormulario {
+        height: 250px;
+
+
+
+    }
+
+    textarea {
+        height: 100px;
+		
+    }
+
+}
+
+.alertasMensajes .btCopiar {
+    border: 1px solid rgb(17, 121, 201);
+    color: rgb(17, 121, 201);
+    margin: 20px 0;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+#divLogo{
+	position:relative;
+	left:5%
+}
+#divEstudiante{
+	position:relative;
+	right:5%
+}
+  </style>
+    <title>Proyecto Encriptador</title>
+</head>
+
+<body>
+</br></br></br></br>
+    <header>
+        <div id="divLogo">
+            <img class="logo" src="imagenes/foto.png" alt="alura">
+        </div>
+		<div id="divEstudiante">
+            <p>Edgar Genaro Hernandez Galeano</p>
+         </div>
+    </header>
+
+    <div class="contenedor">
+        <div class="divFormulario">
+            <textarea id="textoOriginal" placeholder="Digite los textos aquí"></textarea>
+            <div class="revision">
+                <div class="botones">
+                    <button class="btEncrit">Encriptar</button>
+                    <button class="btDecencript">Decencriptar</button>
+                </div>
+            </div>
+        </div>
+        <div class="alertasMensajes">
+            <div class="resultado">
+                <img src="imagenes/banner.png">
+                <h3>Sin encritar</h3>
+                <p>Digital el texto que deseas encriptar o desencriptar</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
